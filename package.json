@@ -1,0 +1,25 @@
+{
+  "name": "bun-website",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot run src/index.tsx",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:push": "drizzle-kit push:sqlite",
+    "deploy": "fly deploy"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "latest",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.19.13",
+    "typed-html": "^3.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.6.5",
+    "drizzle-orm": "^0.28.6",
+    "elysia": "^0.6.22"
+  }
+}
